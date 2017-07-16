@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PHP-ML Graphical Interface</title>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <style>
+    #wrap {
+      margin: 50px auto;
+      text-align: center;
+    }
+    #result {
+      display: none;
+      font-weight: bolder;
+    }
+    input[type=file] {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <form enctype="multipart/form-data" method="post" name="phpml">
+      <input type="file" name="ufile" accept=".json">
+    </form>
+    <div id="result"></div>
+  </div>
+<script>
+$("input[name='ufile']").change(function(e) {
+      e.preventDefault();
+      var formData = new FormData();
+      var file = this.files[0];
+      formData.append('ufile', file);
+      $.ajax({
+          url: 'loader.php',
+          type: "POST",
+          data: formData,
+          async: false,
+          success: function (msg) {
+              $.ajax({
+                url: 'worker.php',
+                type: "GET",
+                data: "datafile=" + file.name,
+                success: function (m) {
+                  $('form').fadeOut();
+                  $('#result').text(m).fadeIn();
+                }
+              })
+          },
+          error: function(msg) {
+              alert('Error while file uploading!');
+          },
+          cache: false,
+          contentType: false,
+          processData: false
+      });
+  });
+</script>
+</body>
+</html>
