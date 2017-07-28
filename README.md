@@ -5,9 +5,9 @@
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/liashchynskyi/PHP-ML-GUI.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
 
 [PHP-ML Repository](https://github.com/php-ai/php-ml)
-
-![ML](https://github.com/php-ai/php-ml/raw/master/docs/assets/php-ml-logo.png)
-
+ 
+<center><img src="https://github.com/php-ai/php-ml/raw/master/docs/assets/php-ml-logo.png
+ "><center>
 ## How to use?
 
 Save your data in `json` format like this:
