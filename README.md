@@ -19,5 +19,5 @@ Save your data in `json` format like this:
 
 ```
 
-After that upload your file to server & enjoy it)
+After that upload your file on server & enjoy it)
 
