@@ -6,8 +6,7 @@
 
 [PHP-ML Repository](https://github.com/php-ai/php-ml)
  
-<center><img src="https://github.com/php-ai/php-ml/raw/master/docs/assets/php-ml-logo.png
- "><center>
+<center><img src="https://github.com/php-ai/php-ml/raw/master/docs/assets/php-ml-logo.png"><center>
  
 ## How to use?
 
