@@ -1,4 +1,4 @@
-# PHP-ML - Machine Learning library for PHP - GUI for KNearestNeighbors
+# Machine Learning library for PHP - GUI for KNearestNeighbors
 
 [![GitHub stars](https://img.shields.io/github/stars/liashchynskyi/PHP-ML-GUI.svg)](https://github.com/liashchynskyi/PHP-ML-GUI/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/liashchynskyi/PHP-ML-GUI/master/LICENSE)
@@ -8,7 +8,7 @@
  
 <center><p><img src="https://github.com/php-ai/php-ml/raw/master/docs/assets/php-ml-logo.png"></p><center>
  
-## How to use?
+## How to useuse it?
 
 Save your data in `json` format like this:
 
@@ -27,7 +27,7 @@ Save your data in `json` format like this:
 
 ```
 
-After that upload your file on server & enjoy it)
+After that upload your file to a server & enjoy it)
 
 ## License
 
