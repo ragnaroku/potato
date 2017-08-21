@@ -8,7 +8,7 @@
  
 <center><p><img src="https://github.com/php-ai/php-ml/raw/master/docs/assets/php-ml-logo.png"></p><center>
  
-## How to useuse it?
+## How to use it?
 
 Save your data in `json` format like this:
 
