@@ -3,14 +3,37 @@
 [![GitHub stars](https://img.shields.io/github/stars/liashchynskyi/PHP-ML-GUI.svg)](https://github.com/liashchynskyi/PHP-ML-GUI/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/liashchynskyi/PHP-ML-GUI/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/liashchynskyi/PHP-ML-GUI.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
-
-[PHP-ML Repository](https://github.com/php-ai/php-ml)
- 
-<center><p><img src="https://github.com/php-ai/php-ml/raw/master/docs/assets/php-ml-logo.png"></p><center>
  
+<center><p><img src="https://image.flaticon.com/icons/svg/247/247468.svg" width="200px"></p><center>
+
+
+#Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+##Installing
+
+First, you need to clone the repository to your computer:
+
+```sh
+git clone https://github.com/liashchynskyi/potato.git
+``` 
+
+Then, you need to move your project dir to web server. (I used LAMP. You can use XAMP, Nginx, etc. if you want). 
+
+Also you need to configure virtual hosts on your server. How to do that is explained in this [article](https://serversforhackers.com/c/configuring-apache-virtual-hosts).
+
+After that open `public_html` dir and run command:
+
+```sh
+php composer.phar install
+```
+
+**PHP 7 and Composer is required.**
+
 ## How to use it?
 
-Save your data in `json` format like this:
+Save your data in `json` file like this:
 
 ```
 {
@@ -29,26 +52,10 @@ Save your data in `json` format like this:
 
 After that upload your file to a server & enjoy it)
 
-## License
+#Demo
 
-MIT License
+![demo](http://i.imgur.com/RYmVNii.gif)
 
-Copyright (c) 2017 Petro Liashchynskyi
+# License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This project is licensed under the MIT. For more see **LICENSE** file.
