@@ -7,11 +7,11 @@
 <center><p><img src="https://image.flaticon.com/icons/svg/247/247468.svg" width="200px"></p><center>
 
 
-#Getting Started
+# Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-##Installing
+## Installing
 
 First, you need to clone the repository to your computer:
 
@@ -52,7 +52,7 @@ Save your data in `json` file like this:
 
 After that upload your file to a server & enjoy it)
 
-#Demo
+# Demo
 
 ![demo](http://i.imgur.com/RYmVNii.gif)
 
