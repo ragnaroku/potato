@@ -102,6 +102,7 @@ For K-Means:
 After that upload your file to a server & enjoy it)
 
 **If files don't upload run these commands:**
+
 For Linux:
 
 ```sh
