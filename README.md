@@ -106,6 +106,8 @@ For K-Means:
 
 After that upload your file to a server & enjoy it)
 
+**For site navigation use mouse or arrow keys.**
+
 **If files don't upload run these commands:**
 
 For Linux:
