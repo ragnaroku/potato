@@ -37,7 +37,7 @@ Save your data in `json` file.
 
 For KNearestNeighbors:
 
-```
+```json
 {
 	"samples": [
 		[1, 3],
@@ -58,7 +58,7 @@ For KNearestNeighbors:
 
 For SVC:
 
-```
+```json
 {
 	"samples": [
 		[1, 3],
@@ -81,7 +81,7 @@ For SVC:
 
 For K-Means:
 
-```
+```json
 {
 	"samples": [
 		[1, 3],
@@ -105,13 +105,13 @@ After that upload your file to a server & enjoy it)
 
 For Linux:
 
-```sh
+```bash
 sudo chmod -R 777 public_html
 ```
 
 For Windows:
 
-```sh
+```bash
 takeown /f public_html\* /r
 icacls public_html /grant Everyone:F /t
 ```
