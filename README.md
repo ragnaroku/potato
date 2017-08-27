@@ -105,13 +105,13 @@ After that upload your file to a server & enjoy it)
 
 For Linux:
 
-```bash
+```shell
 sudo chmod -R 777 public_html
 ```
 
 For Windows:
 
-```bash
+```shell
 takeown /f public_html\* /r
 icacls public_html /grant Everyone:F /t
 ```
