@@ -35,7 +35,9 @@ php composer.phar install
 
 ## How to use it?
 
-Save your data in `json` file like this:
+Save your data in `json` file.
+
+For KNearestNeighbor:
 
 ```
 {
@@ -47,7 +49,54 @@ Save your data in `json` file like this:
 		[4, 1],
 		[4, 2]
 	],
-	"labels": ["a", "a", "a", "b", "b", "b"]
+	"labels": ["a", "a", "a", "b", "b", "b"],
+	"config": {
+		"method": "neighbor",
+		"predict": [3, 2]
+	}
+}
+
+```
+
+For SVC:
+
+```
+{
+	"samples": [
+		[1, 3],
+		[1, 4],
+		[2, 4],
+		[3, 1],
+		[4, 1],
+		[4, 2]
+	],
+	"labels": ["a", "a", "a", "b", "b", "b"],
+	"config": {
+		"method": "svc",
+		"linear": true,
+		"cost": 1000,
+		"predict": [3, 2]
+	}
+}
+
+```
+
+For K-Means:
+
+```
+{
+	"samples": [
+		[1, 3],
+		[1, 4],
+		[2, 4],
+		[3, 1],
+		[4, 1],
+		[4, 2]
+	],
+	"config": {
+		"method": "kmeans",
+		"cluster": 2
+	}
 }
 
 ```
