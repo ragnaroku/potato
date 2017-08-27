@@ -12,107 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-    }
-    img.ml {
-      margin-top: -100px;
-      width: 156px;
-    }
-    h3.mtitle {
-      margin-top: 40px;
-      color: #fff;
-      font-weight: bolder;
-    }
-    p.descr {
-      margin-top: 20px;
-      color: #ecf0f1;
-      font-weight: lighter;
-    }
-    #fp-nav ul li a span, .fp-slidesNav ul li a span {
-      background: #fff;
-    }
-    #wrap {
-      text-align: center;
-    }
-    #result {
-      display: none;
-      font-weight: bolder;
-    }
-    input[type=file] {
-      font-size: 16px;
-    }
-    .codew p {
-      text-align: center;
-      font-weight: lighter;
-      color: #fff;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-    .codew {
-      text-align: left;
-      display: block;
-      width: 700px;
-      margin: 0 auto;
-    }
-    .icon-scroll,
-    .icon-scroll:before {
-      position: absolute;
-      left: 50%;
-    }
-    .icon-scroll {
-      width: 40px;
-      height: 70px;
-      margin-left: -20px;
-      bottom: 10%;
-      margin-top: -35px;
-      box-shadow: inset 0 0 0 1px #fff;
-      border-radius: 25px;
-    }
-    .icon-scroll:before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      background: #fff;
-      margin-left: -4px;
-      top: 8px;
-      border-radius: 4px;
-      -webkit-animation-duration: 1.5s;
-              animation-duration: 1.5s;
-      -webkit-animation-iteration-count: infinite;
-              animation-iteration-count: infinite;
-      -webkit-animation-name: scroll;
-              animation-name: scroll;
-    }
-    @-webkit-keyframes scroll {
-      0% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        -webkit-transform: translateY(46px);
-                transform: translateY(46px);
-      }
-    }
-    @keyframes scroll {
-      0% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        -webkit-transform: translateY(46px);
-                transform: translateY(46px);
-      }
-    }
-    h3.how {
-      font-weight: bolder;
-      color: #fff;
-      margin-top: -100px;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
   <div id="wrap">
@@ -121,79 +21,106 @@
       <h3 class="mtitle">
         Machine Learning library for PHP
       </h3>
-      <p class="descr">GUI for KNearestNeighbors only</p>
+      <p class="descr">Graphical User Interface</p>
       <div class='icon-scroll'></div>
     </div>
     <div class="section">
-      <h3 class="how">How to use it?</h3>
-      <div class="codew">
-        <p>Save your data in json file like this and upload to a server</p>
-        <pre class="language-json"><code class="language-json">
-          {
-          	"samples": [
-          		[1, 3],
-          		[1, 4],
-          		[2, 4],
-          		[3, 1],
-          		[4, 1],
-          		[4, 2]
-          	],
-          	"labels": ["a", "a", "a", "b", "b", "b"]
-          }
-        </code></pre>
+      <div class="slide">
+        <h3 class="how">How to use KNearestNeighbors?</h3>
+        <div class="codew">
+          <p>Save your data in json file like this and upload to a server</p>
+          <pre class="language-json"><code class="language-json">
+            {
+            	"samples": [
+            		[1, 3],
+            		[1, 4],
+            		[2, 4],
+            		[3, 1],
+            		[4, 1],
+            		[4, 2]
+            	],
+            	"labels": ["a", "a", "a", "b", "b", "b"],
+                "config": {
+                  "method": "neighbor",
+                  "predict": [3, 2]
+                }
+            }
+          </code></pre>
+        </div>
+      </div>
+      <div class="slide">
+        <form enctype="multipart/form-data" method="post" name="phpml1">
+          <input type="file" name="nfile" accept=".json">
+        </form>
+        <div id="result-kne"></div>
       </div>
     </div>
     <div class="section">
-      <form enctype="multipart/form-data" method="post" name="phpml">
-        <input type="file" name="ufile" accept=".json">
-      </form>
-      <div id="result"></div>
+      <div class="slide">
+        <h3 class="how">How to use SVC?</h3>
+        <div class="codew">
+          <p>Save your data in json file like this and upload to a server</p>
+          <pre class="language-json"><code class="language-json">
+            {
+            	"samples": [
+            		[1, 3],
+            		[1, 4],
+            		[2, 4],
+            		[3, 1]
+            	],
+            	"labels": ["a", "a", "a", "b"],
+                "config": {
+                  "method": "svc",
+                  "linear": true,
+                  "cost": 1000,
+                  "predict": [3, 2]
+                }
+            }
+          </code></pre>
+        </div>
+      </div>
+      <div class="slide">
+        <form enctype="multipart/form-data" method="post" name="phpml2">
+          <input type="file" name="sfile" accept=".json">
+        </form>
+        <div id="result-svc"></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="slide">
+        <h3 class="how">How to use k-means?</h3>
+        <div class="codew">
+          <p>Save your data in json file like this and upload to a server</p>
+          <pre class="language-json"><code class="language-json">
+            {
+            	"samples": [
+            		[1, 3],
+            		[1, 4],
+            		[2, 4],
+            		[3, 1],
+            		[4, 1],
+            		[4, 2]
+            	],
+                "config": {
+                    "method": "kmeans",
+                    "cluster": 2
+                  }
+            }
+          </code></pre>
+        </div>
+      </div>
+      <div class="slide">
+        <form enctype="multipart/form-data" method="post" name="phpml3">
+          <input type="file" name="kfile" accept=".json">
+        </form>
+        <div id="result-k-me"></div>
+      </div>
     </div>
   </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js" data-manual></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js"></script>
-<script>
+<script src="/js/core.js">
 
-$(document).ready(function() {
-
-$('#wrap').fullpage({
-  sectionsColor : ['#3498db', '#2980b9', '#29B6F6'],
-  anchors: ['1', '2', '3'],
-	navigation: true,
-	navigationPosition: 'right',
-	navigationTooltips: ['Introduction', 'How to use it?', 'Upload file']
-});
-
-$("input[name='ufile']").change(function(e) {
-      e.preventDefault();
-      var formData = new FormData();
-      var file = this.files[0];
-      formData.append('ufile', file);
-      $.ajax({
-          url: 'loader.php',
-          type: "POST",
-          data: formData,
-          async: false,
-          success: function (msg) {
-              $.ajax({
-                url: 'worker.php',
-                type: "GET",
-                data: "datafile=" + file.name,
-                success: function (m) {
-                  $('form').fadeOut();
-                  $('#result').text(m).fadeIn();
-                }
-              })
-          },
-          error: function(msg) {
-              alert('Error while file uploading!');
-          },
-          cache: false,
-          contentType: false,
-          processData: false
-      });
-  });
-});
 </script>
 </body>
 </html>

@@ -19,6 +19,9 @@ class DataParser
   public function getLabelsArray() {
     return $this->data['labels'];
   }
+  public function getConfig() {
+    return $this->data['config'];
+  }
 }
 
 
