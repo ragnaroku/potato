@@ -20,9 +20,7 @@ git clone https://github.com/liashchynskyi/potato.git
 ```
 
 Then, you need to move your project dir to web server. (I used LAMP. You can use XAMP, Nginx, etc. if you want).
-
 Also you need to configure virtual hosts on your server. How to do that is explained in this [article](https://serversforhackers.com/c/configuring-apache-virtual-hosts).
-
 After that open `public_html` dir and run command:
 
 ```sh
@@ -37,7 +35,7 @@ php composer.phar install
 
 Save your data in `json` file.
 
-For KNearestNeighbor:
+For KNearestNeighbors:
 
 ```
 {
