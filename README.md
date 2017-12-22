@@ -33,7 +33,7 @@ or
 composer install
 ```
 
-**PHP 7 and Composer is required.**
+**PHP 7 and Composer are required.**
 
 
 
